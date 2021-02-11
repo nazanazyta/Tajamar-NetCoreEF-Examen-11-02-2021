@@ -1,0 +1,17 @@
+﻿@model Pelicula
+
+<h2>Editar imagen o precio de película</h2>
+
+<h4>"@Model.Titulo"</h4>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" value="@Model.IdPelicula" name="idpelicula" />
+    <label>Foto</label>
+    <input type="file" name="fichero" /><br />
+    <label>Foto</label>
+    <input type="number" name="precio" value="@Model.Precio"/><br />
+    <button type="submit" class="btn btn-primary">Cambiar</button>
+</form>
+<a asp-action="Details" asp-controller="Peliculas"
+   asp-route-idpelicula="@Model.IdPelicula"
+   class="btn btn-info">Volver a detalles</a>

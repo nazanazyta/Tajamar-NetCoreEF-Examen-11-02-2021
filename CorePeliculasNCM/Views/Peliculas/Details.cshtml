@@ -1,0 +1,65 @@
+﻿@model Pelicula
+@{
+    List<int> peliculassession = Context.Session.GetObject<List<int>>("peliculas");
+}
+
+<h1 style="background-color: lightgrey">Películas:</h1>
+<hr />
+<table class="table table-success">
+    <thead>
+        <tr>
+            <th>Datos</th>
+            <th>Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Id:</td>
+            <td>@Model.IdPelicula</td>
+        </tr>
+        <tr>
+            <td>Genero:</td>
+            <td>@Model.IdGenero</td>
+        </tr>
+        <tr>
+            <td>Titulo:</td>
+            <td>@Model.Titulo</td>
+        </tr>
+        <tr>
+            <td>Argumento:</td>
+            <td>@Model.Argumento</td>
+        </tr>
+        <tr>
+            <td>Foto:</td>
+            <td>
+                <img src="~/images/@Model.Foto" style="width: 150px; height: 150px" />
+            </td>
+        </tr>
+        <tr>
+            <td>Precio:</td>
+            <td>@Model.Precio</td>
+        </tr>
+    </tbody>
+</table>
+<a asp-action="Edit" asp-controller="Peliculas"
+   asp-route-idpelicula="@Model.IdPelicula"
+   class="btn btn-warning">Editar</a>&nbsp;
+<a asp-action="Lista" asp-controller="Peliculas"
+   asp-route-idgenero="@Model.IdGenero"
+   class="btn btn-info">Back to List</a>&nbsp;
+@if (peliculassession == null)
+{
+    <a asp-action="GuardarPelicula" asp-controller="Peliculas"
+       asp-route-idpelicula="@Model.IdPelicula"
+       class="btn btn-success">Guardar en el carrito</a>
+}
+else if (!peliculassession.Contains(Model.IdPelicula))
+{
+    <a asp-action="GuardarPelicula" asp-controller="Peliculas"
+       asp-route-idpelicula="@Model.IdPelicula"
+       class="btn btn-success">Guardar en el carrito</a>
+}
+else
+{
+    <button disabled type="button" class="btn btn-outline-success">Añadido</button>
+}

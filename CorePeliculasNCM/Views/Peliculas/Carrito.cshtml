@@ -1,0 +1,27 @@
+﻿@model List<Pelicula>
+
+@{ 
+    int total = Context.Session.GetObject<int>("total");
+}
+
+<h1 style="background-color: lightgrey">Carrito:</h1>
+
+<table class="table table-light">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Pelicula pel in Model)
+        {
+        <tr>
+            <td>@pel.Titulo</td>
+            <td>@pel.Precio</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<h1>Total: @total €</h1>

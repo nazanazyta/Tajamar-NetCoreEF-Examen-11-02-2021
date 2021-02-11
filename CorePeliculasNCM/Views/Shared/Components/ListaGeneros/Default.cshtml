@@ -1,0 +1,13 @@
+﻿@model List<Genero>
+
+
+    <h1 style="background-color: lightgrey">Géneros:</h1>
+    <ul class="list-group">
+        @foreach (Genero gen in Model)
+        {
+            <li class="list-group-item">
+                <a asp-controller="Peliculas" asp-action="Lista"
+                   asp-route-idgenero="@gen.IdGenero">@gen.Nombre</a>
+            </li>
+        }
+    </ul>

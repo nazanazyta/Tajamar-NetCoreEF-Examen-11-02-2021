@@ -1,0 +1,30 @@
+﻿@model List<Pelicula>
+
+<h1 style="background-color: lightgrey">Películas:</h1>
+
+<table class="table table-bordered table-info">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Precio</th>
+            <th>Foto</th>
+            @*<th>IdGenero</th>*@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Pelicula pel in Model) {
+        <tr>
+            <td>
+                <a asp-controller="Peliculas" asp-action="Details"
+                   asp-route-idpelicula="@pel.IdPelicula">@pel.Titulo</a>
+            </td>
+            <td>@pel.Precio</td>
+            <td>
+                <img style="width: 150px; height: 150px"
+                     src="~/images/@pel.Foto" />
+            </td>
+            @*<td>@pel.IdGenero</td>*@
+        </tr>
+}
+    </tbody>
+</table>

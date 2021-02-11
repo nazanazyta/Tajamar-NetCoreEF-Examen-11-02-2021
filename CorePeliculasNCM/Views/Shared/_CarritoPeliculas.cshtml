@@ -1,0 +1,19 @@
+﻿@{
+    List<int> peliculas = Context.Session.GetObject<List<int>>("peliculas");
+    int total = 0;
+    int precio = Context.Session.GetObject<int>("total");
+}
+@if (peliculas != null && peliculas.Count() != 0)
+{
+    <h1 style="background-color: lightgrey">
+        Compras:
+        @foreach (int emp in peliculas)
+        {
+            total++;
+        }
+
+        <span>@total</span>
+    </h1>
+    <h3>Total: @precio</h3>
+    <a asp-action="MostrarPeliculas" asp-controller="Peliculas">Mostrar Carrito</a>
+}
