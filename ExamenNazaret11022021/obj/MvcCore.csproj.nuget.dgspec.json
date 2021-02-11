@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Repos\\Tajamar-NetCoreEF-Examen-11-02-2021\\MvcCore\\MvcCore.csproj": {}
+    "C:\\Users\\Serra\\source\\repos\\MvcCore\\MvcCore\\MvcCore.csproj": {}
   },
   "projects": {
-    "G:\\Repos\\Tajamar-NetCoreEF-Examen-11-02-2021\\MvcCore\\MvcCore.csproj": {
+    "C:\\Users\\Serra\\source\\repos\\MvcCore\\MvcCore\\MvcCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Repos\\Tajamar-NetCoreEF-Examen-11-02-2021\\MvcCore\\MvcCore.csproj",
+        "projectUniqueName": "C:\\Users\\Serra\\source\\repos\\MvcCore\\MvcCore\\MvcCore.csproj",
         "projectName": "MvcCore",
-        "projectPath": "G:\\Repos\\Tajamar-NetCoreEF-Examen-11-02-2021\\MvcCore\\MvcCore.csproj",
-        "packagesPath": "C:\\Users\\Naza\\.nuget\\packages\\",
-        "outputPath": "G:\\Repos\\Tajamar-NetCoreEF-Examen-11-02-2021\\MvcCore\\obj\\",
+        "projectPath": "C:\\Users\\Serra\\source\\repos\\MvcCore\\MvcCore\\MvcCore.csproj",
+        "packagesPath": "C:\\Users\\Serra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Serra\\source\\repos\\MvcCore\\MvcCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Naza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Serra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -30,7 +31,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,7 +42,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -61,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
