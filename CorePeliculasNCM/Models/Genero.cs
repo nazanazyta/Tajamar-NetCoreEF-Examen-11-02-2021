@@ -13,7 +13,7 @@ namespace CorePeliculasNCM.Models
         [Key]
         [Column("idgenero")]
         public int IdGenero { get; set; }
-        [Column("genero")]
+        [Column("nombre")]
         public String Nombre { get; set; }
     }
 }
